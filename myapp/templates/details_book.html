@@ -1,0 +1,22 @@
+{%extends 'theme.html'%}
+{%block content%}
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            {%if data.cover_image%}
+                <img src="{{data.cover_image.url}}" style="width: 100%;height: 400px;" class="card-img-top" alt="no image">
+            {%endif%}
+            <div class="card-body">
+              <h5 class="card-title">Name: {{data.name}}</h5>
+              <p class="card-text">Author: {{data.author}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Catogary: {{data.catogary}}</li>
+              <li class="list-group-item">Published_date: {{data.published_date}}</li>
+              <li class="list-group-item">Pages: {{data.pages}}</li>
+              <li class="list-group-item">Rating: {{data.rating}}</li>
+            </ul>
+            
+          </div>
+    </div>
+
+{%endblock%}
